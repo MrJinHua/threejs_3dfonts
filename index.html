@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3Dfonts_3D字体在线设计</title>
+     </head>
+  <body>
+    <div id="app">  
+
+      <div class="leftContainer">
+        <div class="canvasTop">
+          <div></div>
+          <div>
+            <a  class='canvasTop_about' href="./about.html">关于 </a>
+          </div>
+        </div>
+
+        <div class="canvas"></div>
+
+        <div class="canvasBottom">
+
+          <div class="canvasBottom_des">
+              鼠标左键-旋转 / 鼠标滚轮-缩放 / 鼠标右键-平移
+          </div>
+
+          <div class="canvasBottom_btn_group">
+            <button class="prevBtn canvasBottom_btn">预览图片</button>
+            <button class="saveBtn canvasBottom_btn">保存图片</button>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+      <div class="rightContainer">
+        <!-- ************************************* -->
+        <div class="tool_container">
+          <h5>输入文字</h5>
+          <from>
+            <input type="text" placeholder="请输入文字" id="text_content">
+            <button type="submit" id="text_content_btn">确定</button>
+          </from>
+          
+        </div>
+
+
+        <!-- ******************************************* -->
+        <div class="tool_container">
+          <h5>灯光设置</h5>
+
+          <div class="singlePara">
+            <div class="singlePara_title"><h6>颜色</h6></div>
+            <input class="singlePara_value" type="text" value="#ffffff">
+            <div class="singlePara_control">
+              <input type="color" class="colorPicker colorPicker_light" value="#ffffff">
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title"><h6>位置x</h6></div>
+            <input class="singlePara_value" type="text" value="">
+            <div class="singlePara_control"><input type="range" min="-200" max="200" id="light_pos_x"></div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title"><h6>位置y</h6></div>
+            <input class="singlePara_value" type="text" value="">
+            <div class="singlePara_control"><input type="range" min="-200" max="200" id="light_pos_y"></div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title"><h6>位置z</h6></div>
+            <input class="singlePara_value" type="text" value="">
+            <div class="singlePara_control"><input type="range" min="-200" max="500" id="light_pos_z"></div>
+          </div>
+
+        </div>
+
+        <!-- ************************************************************* -->
+        <div class="tool_container">
+          <h5>背景设置</h5>
+         
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>颜色</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="#cccccc">
+            <div class="singlePara_control">
+              <input type="color" class="colorPicker_bg"  value="#cccccc">
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>阴影</h6>
+            </div>
+            <div class="singlePara_value">
+              <input type="checkbox" checked class="shadow_check">
+            </div>
+            <div class="singlePara_control"></div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>透明背景</h6>
+            </div>
+            <div class="singlePara_value">
+              <input type="checkbox"  class="transparent_check">
+            </div>
+            <div class="singlePara_control"></div>
+          </div>
+
+        </div>
+
+
+        <!-- ********************************************************************** -->
+        <div class="tool_container">
+          <h5>3D设置</h5>
+          
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>字体</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="站酷">
+            
+            <div class="singlePara_control">
+              <select name="font_style" id="font_style">
+                <option value="font_0">快乐体</option>
+                <option value="font_1">仓耳渔阳体</option>
+                <option value="font_2">小薇LOGO体</option>
+                <option value="font_3">意大利体(En)</option>
+                <option value="font_4">酷黑体</option>
+                <option value="font_5">高端黑体</option>
+                <option value="font_6">庆科黄油体</option>
+                <option value="font_7">文艺体</option>
+              </select>
+            </div> 
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>正面颜色</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="#3ca23c">
+            <div class="singlePara_control">
+              <input type="color" class="colorPicker_text1" value="#3ca23c">
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>侧边颜色</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="#b7c5b7">
+            <div class="singlePara_control">
+              <input type="color" class="colorPicker_text2" value="#b7c5b7">
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>字体大小</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="0xffffff">
+            <div class="singlePara_control">
+              <input type="range" min="1" max="50" id="size_control">
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>深度</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="0xffffff">
+            <div class="singlePara_control">
+              <input type="range" min="0" max="10" id="height_control" >
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>深度光滑</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="0xffffff">
+            <div class="singlePara_control">
+              <input type="range" min="0" max="9.5" step="0.1" id="bevelThickness_control">
+            </div>
+          </div>
+
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>倒角大小</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="0xffffff">
+            <div class="singlePara_control">
+              <input type="range" min="0" max="10"  step="0.01" id="bevelSize_control">
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>倒角光滑</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="0xffffff">
+            <div class="singlePara_control">
+              <input type="range" min="1" max="10"  id="bevelSegments_control">
+            </div>
+          </div>
+
+          <div class="singlePara">
+            <div class="singlePara_title">
+              <h6>描边</h6>
+            </div>
+            <input class="singlePara_value" type="text" value="0xffffff">
+            <div class="singlePara_control">
+              <input type="range" min="0" max="5"  id="bevelOffset_control">
+            </div>
+          </div>
+
+
+        
+
+        </div>
+
+      </div>
+
+  </div>    
+          
+ 
+
+
+       <script type="module" src="/main.js"></script>
+  </body>
+</html>
